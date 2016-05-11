@@ -2,7 +2,7 @@ FROM jenkins:2.0-alpine
 MAINTAINER kmilner@seven10storage.com
 
 USER root
-RUN apk add --update git &&\
+RUN apk add --update perl git &&\
     echo "jenkins ALL=NOPASSWD: ALL" >> /etc/sudoers
 
 COPY bin/setup-docker-and-start-jenkins.sh /usr/local/bin/setup-docker-and-start-jenkins.sh
